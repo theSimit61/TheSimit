@@ -1,0 +1,32 @@
+.navigation{
+  background-color: #011B3C;
+  min-width: 768px;
+  max-width: 1080px;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+#bubble {
+  text-align: center;
+  margin-top: 25px;
+  padding-bottom: 35px;
+}
+
+.buttons{
+ background: transparent;
+ position: fixed;
+ align: right;
+}
+
+#buttonDown{
+  bottom: 55px;
+  border: none;
+  outline: none;
+}
+
+#buttonUp{
+  margin-top:10px;
+  border: none;
+  outline: none;
+}

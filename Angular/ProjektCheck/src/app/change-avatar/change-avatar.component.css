@@ -1,0 +1,52 @@
+
+.avatarButton{
+background: transparent;
+border: none;
+outline: none;
+}
+
+#abbrechen{
+ background-color: #8da6d6;
+   color: #4565ad;
+  font-size: 13px;
+}
+
+#speichern{
+  font-size: 13px;
+}
+
+.aButton{
+
+  margin-bottom: 20px;
+}
+.bButton{
+  margin-top: 10px;
+}
+
+.row{
+  text-align: center;
+  margin-right: -250px;
+  margin-left: 200px;
+  padding-bottom: 10px;
+
+}
+
+.col-md-1 {
+  width: 8%;
+}
+
+.defaultbutton{
+      font-family: 'Comic Sans MS', sans-serif;
+      font-size: 13pt;
+      font-weight: 800;
+      letter-spacing: 2px;
+      line-height: 11pt;
+      border-radius: 5px;
+      background-clip: padding-box;
+      width: 150px;
+      height: 40px;
+      padding-top: 1px;
+      color: white;
+      border: blue;
+      background-color: #011B3C;
+}

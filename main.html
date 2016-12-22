@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Klassenzimmer</title>
+     <link href="style.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src= "javascript.js" type="text/javascript" > </script>
+  </head>
+
+  <body class="main"  onload="img_create()">
+      <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+        <div class="navigation" >
+            <ul id="left" class="nav navbar-nav navbar-left">
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#"><img src="img/chapterOverview-inactive.png" alt="eine grafik" ></a>
+                  <ul class="dropdown-menu">
+                      <label id="imgConfi" ><img src="img/confirmation.png"  alt="eine grafik" >
+                      <label>CHECK!<br>KOMPETENZLISTE</label></label><br><br>
+
+                      <li id="kom1"><a href="">DAS BIN ICH!</a></li>
+                      <li id="kom2"><a href="">ICH UND DIE ANDEREN</a></li>
+                      <li id="kom3"><a href="">DIE WELT UM MICH HERUM</a></li>
+                      <li id="kom4"><a href="">ICH WERDE SELBSTSTÄNDIG</a></li>
+                      <li id="kom5"><a href="">SICH BEWEGEN</a></li>
+                      <li id="kom6"><a href="">LERNEN</a></li>
+                      <li id="kom7"><a href="">ARBEITEN</a></li>
+                      <li id="kom8"><a href="">GESTALTEN UND ERSCHAFFEN</a></li>
+                      <li id="kom9"><a href="">SPRECHEN</a></li>
+                      <li id="kom10"><a href="">FREMDSPRACHE</a></li>
+                      <li id="kom11"><a href="">LESEN</a></li>
+                      <li id="kom12"><a href="">SCHREIBEN</a></li>
+                      <li id="kom13"><a href="">MESSEN</a></li>
+                      <li id="kom14"><a href="">LÖSUNGEN FINDEN</a></li>
+                      <li id="kom15"><a href="">ZÄHLEN UND RECHNEN</a></li>
+                      <li id="kom16"><a href="">FORM UND RAUM ENTDECKEN</a></li>
+                  </ul>
+              </li>
+              <li><a href=""><img src="img/educationalPlan-inactive.png"  alt="eine grafik" ></a></li>
+              <li><a href=""><img src="img/achievedCompetences-inactive.png"  alt="eine grafik" ></a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" >
+              <li><a href=""><img src="img/student/superhero-robin-inactive.png"  alt="eine grafik" ></a></li>
+              <li><a href=""><img src="img/school/school-inactive.png" alt="eine grafik" ></a></li>
+              <li><a href=""><img src="img/studyGroup/studyGroup_0_active.png" alt="eine grafik" ></a></li>
+              <li><a href=""><img src="img/help-inactive.png"  alt="eine grafik" ></a></li>
+              <li><a href=""><img src="img/logout-iactive.png"  alt="eine grafik" ></a></li>
+            </ul>
+
+          </div>
+            <div class="logo"> <img src="img/logo.png"> </div>
+      </nav>
+
+   <div class="content">
+    <div class="row">
+      <div class="col-sm-4">  <img id="links" src="img/chapter01/littleChapterFlag.png" align="left" position="fixed">
+                              <img src="img/illustrations/illustrationLeft.png" align="left" position="fixed"> </div>
+       <div class="col-sm-4" id="bubble" position="fixed" >  </div>
+       <div class="col-sm-4" id="illuRight">
+         <img id="rechts" src="img/illustrations/illustrationRight.png" position="fixed" style="margin-top: 45px">
+
+         <button class="buttons" id="buttonDown" type="button" class="btn btn-round" (click)="scrollWin(0,80)">  <img src="img/chapter10/scrollDown.png"> </button>
+         <button class="buttons" id="buttonUp" type="button" class="btn btn-round" onclick="scrollWin(0,-80)"> <img src="img/chapter10/scrollUp.png"> </button>
+
+       </div>
+    </div>
+  </div>
+
+  <div id="footerMain" class="footer navbar-fixed-bottom" ng-show="!fullScreenMode" >
+     <img src="img/login/footer.png"><br/>
+     <span class="footerproductedition">edition 2016 dark night blue 1.0</span>
+
+
+  </div>
+  </body>
+</html>
