@@ -1,3 +1,16 @@
-<p>
-  drop-profil works!
-</p>
+<li class="dropdownrechts"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+  <img src="..{{getProfil.avatarInactiveUrl}}" alt="eine grafik" name="drop-p"
+   (mousedown)="avatarActive(getProfil.avatarUrl)" ></a>
+    <ul class="dropdown-menu">
+        <label id="imgConfi" ><img src="..{{getProfil.avatarBigUrl}}"  alt="eine grafik" >
+        <label>{{forename}} {{surname}}</label></label><br>
+        <br><br><br><br>
+        <li (mouseenter)="onHover($event)"
+        (mouseleave)="unHover($event)"><a routerLink="/changeAvatar" routerLinkActive="active" > MEIN PROFILBILD ÄNDERN</a></li>
+        <li (mouseenter)="onHover($event)"
+        (mouseleave)="unHover($event)"><a routerLink="/changePassword" routerLinkActive="active" >MEIN PASSWORT ÄNDERN</a></li>
+        <li (mouseenter)="onHover($event)"
+        (mouseleave)="unHover($event)"><a routerLink="/deleteProfil"routerLinkActive="active" >MEIN PROFIL LÖSCHEN</a></li>
+
+    </ul>
+</li>

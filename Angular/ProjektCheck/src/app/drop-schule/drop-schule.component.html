@@ -1,3 +1,12 @@
-<p>
-  drop-schule works!
-</p>
+<li class="dropdownrechts"><a class="dropdown-toggle" data-toggle="dropdown" id="dropdownschool" href="#"><img src="{{school.imageUrlInactive}}"  alt="eine grafik"
+  name="dropschool" (mousedown)="activeSchool(school.imageUrl, school.imageUrlInactive)" ></a>
+    <ul class="dropdown-menu">
+        <label id="imgConfi" ><img src="..{{school.imageUrlBig}}"  alt="eine grafik" >
+        <label>{{school.name}}</label></label>
+      <label style="color: white"><label>Adresse: {{school.address }}</label>
+          <label>Land: {{school.country }}</label><br>
+          <br><label>Email: {{school.email }}</label>
+          <label>Telefon: {{school.telefon}}</label></label>
+
+    </ul>
+</li>

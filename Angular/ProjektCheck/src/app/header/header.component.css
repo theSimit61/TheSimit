@@ -1,0 +1,16 @@
+
+#left li{
+  margin-right: 10px;
+}
+
+#right li{
+  margin-left: 10px;
+}
+
+.navbar-right{
+  margin-right: 2;
+}
+
+.navbar-left{
+  margin-left: 2;
+}

@@ -1,4 +1,8 @@
-
+#myModalTrue{
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 13pt;
+  color: white;
+}
 .inputPW{
   width:210px;
   text-align:right;

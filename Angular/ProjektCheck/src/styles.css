@@ -1,28 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+.popover-content {
+  background-color: #001a3a;
+  color: white;
+  border: 3px solid white;
+
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 11pt;
+
+}
+
 body{
-  /*  background-color: #f29db7;*/
     min-width: 768px;
     max-width: 1080px;
     margin-left:auto;
     margin-right:auto;
-    margin-top: 30px;
-    padding-top: 40px;
+    margin-top: 28px;
+    padding-top: 30px;
     padding-bottom: 40px;
+}
+
+body .footer :link, body .footer :visited, body .container :link, body .container :visited{
+  color: #a5b5de;
+  text-decoration: none;
+  text-underline: none;
+}
+
+li .dropdownrechts {
+  margin-top: 12px;
+}
+li .dropdownleft{
+  margin-top: 12px;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+  background-color: transparent;
 }
 
 .buttons{
  background: transparent;
  position: fixed;
  align: right;
+
 }
 
 #footerMain{
   text-align: center;
   color: #8da6d6;
-  background-color:  #011B3C;
+  background-color: #011B3C;
   height: 50px;
  width: 100%;
-
  padding-top: 5px;
 }
 
@@ -30,6 +55,8 @@ body{
   background-color: #011B3C;
   margin-left:auto;
   margin-right:auto;
+  height: 60px;
+  margin-bottom: 0px;
 
 }
 
@@ -51,68 +78,109 @@ body{
 
 }
 
-.dropdown .dropdown-menu {
+.dropdownrechts .dropdown-menu {
  border-width: 5px;
  border-color: white;
  text-decoration: none;
-
 }
 
-.navigation .dropdown ul.dropdown-menu {
+.dropdownleft .dropdown-menu {
+ border-width: 5px;
+ border-color: white;
+ text-decoration: none;
+}
+
+.navigation .dropdownrechts ul.dropdown-menu {
   background-color: #011B3C;
     margin-top:10px;
     width:300px;
     border-radius: 5px;
 }
 
-.dropdown ul.dropdown-menu:before {
+
+.navigation .dropdownleft ul.dropdown-menu {
+  background-color: #011B3C;
+    margin-top:10px;
+    width:300px;
+    border-radius: 5px;
+}
+.dropdownleft ul.dropdown-menu:before {
     content: "";
     border-bottom: 8px solid white;
     border-right: 8px solid transparent;
     border-left: 8px solid transparent;
     position: absolute;
-    top: -13px;
-    left: 25px;
-
-
-
+    top: -14px;
+    left: 6px;
 }
-.dropdown ul.dropdown-menu:after {
+
+.dropdownleft ul.dropdown-menu:after {
   content: "";
 
     border-bottom: 10px solid white;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
     position: absolute;
-    top: -15px;
-    left: 20px;
+    top: -14px;
+    left: 6px;
 }
 
-.dropdown ul.dropdown-menu {
+.dropdownrechts ul.dropdown-menu:before {
+    content: "";
+    border-bottom: 8px solid white;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    position: absolute;
+    top: -14px;
+    right: 6px;
+}
+
+.dropdownrechts ul.dropdown-menu:after {
+  content: "";
+
+    border-bottom: 10px solid white;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -14px;
+    right: 6px;
+}
+
+.dropdownrechts ul.dropdown-menu {
+  color: #4565ad;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 11pt;
+}
+.dropdownleft ul.dropdown-menu {
   color: #4565ad;
   font-family: 'Comic Sans MS', sans-serif;
   font-size: 11pt;
 }
 
-.dropdown ul.dropdown-menu a{
+.dropdownleft ul.dropdown-menu a{
   color: white;
   font-family: 'Comic Sans MS', sans-serif;
-  font-size: 13pt;
+  font-size: 12pt;
   font-weight: bold;
-  padding: 5px;
+  padding: 7px;
 
 }
 
-.dropdown ul.dropdown-menu:hover a{
+.dropdownrechts ul.dropdown-menu a{
   color: white;
-  padding: 5px;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  padding: 7px;
+
 }
 
+.dropdownrechts ul.dropdown-menu li {
+ border-top: 3px solid white;
 
-.dropdown ul.dropdown-menu li {
- list-style-position: outside;
- border-top: 5px solid white;
-
+}
+.dropdownleft ul.dropdown-menu li {
+ border-top: 3px solid white;
 }
 
 .contentAll {
@@ -137,130 +205,11 @@ body{
 #imgConfi {
   padding-left: 10px;
   padding-top: 5px;
+  height:90px;
+  float: left;
 }
 
-#kom1{
-  background-color: #79ab2e;
+.dropdown-menu>li>a:hover {
 
-}
-#kom1:hover a{
-  background-color: #a1c153;
-}
-
-#kom2{
-  background-color: #c6d54f;
-
-}
-#kom2:hover a{
-  background-color: #dbe283;
-
-}
-
-#kom3{
-  background-color: #94c122;
-
-}
-#kom3:hover a{
-  background-color: #bad151;
-}
-
-#kom4{
-  background-color: #44b284;
-
-}
-#kom4:hover a{
-  background-color: #7cc3a3;
-
-}
-
-#kom5{
-  background-color: #ffdd00;
-}
-#kom5:hover a{
-  background-color: #ffea64;
-}
-#kom6{
-  background-color: #ffed98;
-
-}
-#kom6:hover a{
-  background-color: #fff3d8;
-}
-
-#kom7{
-  background-color: #fbb900;
-
-}
-#kom7:hover a{
-  background-color: #ffcf53;
-}
-
-#kom8{
-  background-color: #ef7d25;
-
-}
-#kom8:hover a{
-  background-color: #f5a04c;
-}
-
-#kom9{
-  background-color: #d60d66;
-
-}
-#kom9:hover a{
-  background-color: #e35184;
-}
-
-#kom10{
-  background-color: #ea518d;
-
-}
-#kom10:hover a{
-  background-color: #ee7ba9;
-}
-
-#kom11{
-  background-color: #f29db7;
-
-}
-#kom11:hover a{
-  background-color: #f7bed2;
-}
-
-#kom12{
-  background-color: #a62068;
-
-}
-#kom12:hover a{
-  background-color: #c9427e;
-}
-#kom13{
-  background-color: #008fc8;
-
-}
-#kom13:hover a{
-  background-color: #4fa8da;
-}
-
-#kom14{
-  background-color: #62c2d0;
-
-}
-#kom14:hover a{
-  background-color: #94d3e5;
-}
-
-#kom15{
-  background-color: #004077;
-
-}
-#kom15:hover a{
-  background-color: #005daa;
-}
-#kom16{
-  background-color: #3873b9;
-
-}
-#kom16:hover a{
-  background-color: #658bc8;
-}
+    background-color: transparent;
+  }

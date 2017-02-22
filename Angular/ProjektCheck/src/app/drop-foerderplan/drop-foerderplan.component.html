@@ -1,0 +1,14 @@
+<li class="dropdownleft"><a class="dropdown-toggle" data-toggle="dropdown"
+   href="#"><img src="images/educationalPlan-inactive.png"  alt="eine grafik" name="drop"
+   (click)="Active()" aria-pressed="true"></a>
+    <ul class="dropdown-menu">
+     <label id="imgConfi" ><img src="../images/educationalPlan-big.png"  alt="eine grafik" >
+        <label>Förderplan<br></label></label>
+
+      <br><br><br><br><br><li *ngFor="let items of getEducations"
+      (mousedown)="loading(items._id)"
+      (mouseenter)="onHover($event,items._id)"
+      (mouseleave)="unHover($event)"> <a [routerLink]="['/educationPlan', items._id]" [routerLinkActive]="['active']">{{items.name}}</a></li>
+
+    </ul>
+</li>

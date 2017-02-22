@@ -1,13 +1,41 @@
+<app-header></app-header>
+
 <div class="contentAll">
-    <div class="Headline"> <img src="img/delete-profile.png">
+    <div class="Headline"> <img src="images/delete-profile.png">
       <p id="textHeadline"> PROFIL LÖSCHEN </p>
     </div>
 
     <form>
       <div class="deleteP">
-        <label class="inputPW"> PASSWORT*  </label> <input type="password" id="inputPassword" class="form-control">
+        <label class="inputPW"> PASSWORT*  </label> <input type="password"  id="inputPassword" class="form-control">
       </div>
     </form>
 
-      <button type="submit" id="delete" class="defaultbutton">LÖSCHEN</button>
+      <button type="submit" id="delete" class="defaultbutton" (mousedown)="delete()">LÖSCHEN</button>
+
+      <div class="modal fade" id="myModalTrue" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content" [ngStyle]="{'background-color': background}">
+
+            <button type="button" class="close" data-dismiss="modal"><img src="images/delete.png"></button>
+            <br><br><br>
+            <h4 class="modal-title"><div *ngIf="check"><img src="images/confirmation.png"></div>
+            <div *ngIf="!check"><img src="images/warning.png"></div></h4>
+            <br>
+            <div *ngIf="check"><p>{{message.message}}</p></div>
+            <div *ngIf="!check"><p>{{message}}</p></div>
+            <br><br><br>
+
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+
 </div>
+<app-footer></app-footer>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from '../data.service';
 
 @Component({
   selector: 'app-drop-klasse',
@@ -7,9 +8,55 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DropKlasseComponent implements OnInit {
 
-  constructor() { }
+  private study = "";
+  private teacher ="";
 
-  ngOnInit() {
-  }
+    constructor(private dataService: DataService) {
+
+    }
+
+    activeClass(active, inactive){
+
+      var point = ".." + active;
+      document.images['dropklasse'].src = point;
+
+      $(document).ready(function() {
+
+    $('#dropdown').data('open', false);
+
+    $(document).click(function() {
+        if($('#dropdown').data('open')) {
+            $('#dropdown').data('open', false);
+        } else
+            $('#dropdown').data('open', true);
+            var point = ".." + inactive;
+            document.images['dropklasse'].src = point;
+    });
+
+    $(document).click(function() {
+        if($('#dropdown').data('open')) {
+            $('#dropdown').data('open', false);
+
+        }
+    });
+
+});
+
+    }
+
+
+      ngOnInit() {
+        this.dataService.getStudent()
+          .subscribe(
+            data => {
+              this.study = data.studyGroups;
+              this.teacher = data.formteacher;
+
+            },
+
+            error => alert(error),
+            () => console.log('loaded')
+          );
+      }
 
 }

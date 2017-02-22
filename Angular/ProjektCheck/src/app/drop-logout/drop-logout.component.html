@@ -1,0 +1,12 @@
+<li class="dropdownrechts"><a class="dropdown-toggle" data-toggle="dropdown" id="dropdownlog" href="#"><img src="images/logout-iactive.png"  alt="eine grafik"
+    name="droplogout" (mousedown)="activeLogout()" ></a>
+    <ul class="dropdown-menu">
+        <label id="imgConfi" ><img src="../images/logout-big.png"  alt="eine grafik" >
+        <label>MÖCHTEST DU<br>CHECK!<br>VERLASSEN?</label></label><br><br>
+
+      <br><br><br>  <li (mouseenter)="onHover($event)"
+      (mouseleave)="unHover($event)" ><a href="" a routerLink="/login" (click)="logout()">JA</a></li>
+        <li id="nein" (mouseenter)="onHover($event)"
+        (mouseleave)="unHover($event)" >NEIN</li>
+    </ul>
+</li>

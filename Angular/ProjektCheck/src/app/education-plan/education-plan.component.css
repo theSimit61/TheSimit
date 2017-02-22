@@ -1,0 +1,75 @@
+
+
+#text {
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 12pt;
+}
+
+#number {
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 8pt;
+  color: gray;
+
+}
+.text{
+  height: 72px;
+}
+
+
+.row{
+  margin-right:11;
+
+}
+
+.navigation{
+  background-color: #011B3C;
+  min-width: 768px;
+  max-width: 1080px;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+#bubble {
+  text-align: left;
+  padding-left: 12px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-bottom: 35px;
+  padding-top: 18px;
+  background-image: url(../images/contentTextBubble.png);
+  width: 369px;
+  height: 120px;
+}
+
+
+.buttons{
+ background: transparent;
+ position: fixed;
+ align: right;
+ margin: right;
+ border: none;
+ outline: none;
+}
+
+.buttonKom{
+  border: none;
+  outline: none;
+  background: transparent;
+  float: right;
+  margin-right:35px;
+}
+
+#buttonDown{
+  bottom: 55px;
+  padding-left: 140px;
+
+}
+
+#buttonUp{
+  margin-top:10px;
+  padding-left: 140px;
+
+
+
+}

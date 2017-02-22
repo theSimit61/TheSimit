@@ -1,3 +1,17 @@
-<p>
-  drop-fragen works!
-</p>
+<li class="dropdownrechts"><a class="dropdown-toggle" data-toggle="dropdown" id="dropdownfrage" href="#"><img src="images/help-inactive.png"  alt="eine grafik"
+  name="dropfragen" (click)="activeAsk()" ></a>
+    <ul class="dropdown-menu">
+        <label id="imgConfi" ><img src="../images/help-big.png"  alt="eine grafik" >
+        <label>BRAUCHST<br>DU HILFE?</label></label><br><br>
+
+      <br><br><br> <li (mouseenter)="onHover($event)"
+      (mouseleave)="unHover($event)"><a href="http://www.check-lehrerzimmer.com/hilfe/erste-schritte/">SO GEHT'S</a></li>
+        <li (mouseenter)="onHover($event)"
+        (mouseleave)="unHover($event)"><a href="http://www.check-lehrerzimmer.com/tutorial/">VIDEO-TUTORIALS</a></li>
+        <li (mouseenter)="onHover($event)"
+        (mouseleave)="unHover($event)"><a href="http://www.check-lehrerzimmer.com/faq/">HÄUFIG GESTELLTE FRAGEN</a></li>
+        <li (mouseenter)="onHover($event)"
+        (mouseleave)="unHover($event)"><a href="http://www.check-lehrerzimmer.com/contact/">KONTAKT</a></li>
+
+    </ul>
+</li>

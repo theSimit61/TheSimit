@@ -1,14 +1,58 @@
-<div class="content">
+<app-header></app-header>
+
+<div class="content" id="content" [ngStyle]="{'background-color': getColor.strongcolor}">
+
  <div class="row">
-   <div class="col-sm-4">  <img src="img/chapter01/littleChapterFlag.png" align="left" position="fixed">
-                           <img src="img/illustrations/illustrationLeft.png" align="left" position="fixed"> </div>
-    <div class="col-sm-4" id="bubble" position="fixed" >  </div>
+   <div class="col-sm-4">
+      <img src="images/chapter{{getColor._id}}/littleChapterFlag.png" align="left" position="fixed">
+
+      <div  *ngFor="let item of getIllustrations"  >
+        <div *ngIf="illuPicture()">
+            <img src="{{item.illustrationLeft}}" align="left" position="fixed" style="padding-bottom: 150px">
+          </div>
+ </div>
+ </div>
+    <div class="col-sm-4">
+      <div  *ngFor="let item of getDaten"  id="bubble" >
+
+        <div *ngIf="isOK(isEducation(item.id),item.checked)" >
+          <button id="pop{{item.id}}" class="buttonKom" type="button" data-toggle="popover" data-trigger="focus" (mousedown)="popoverDate(item.id, item.fromDate)" >
+
+        <img src="images/chapter{{getColor._id}}/competenceDone.png" />
+      </button>
+
+
+          </div>
+
+
+        <div *ngIf="isEducation(item.id)">
+          <button id="popEdu{{item.id}}" class="buttonKom" type="button" data-toggle="popover" data-trigger="focus" (mousedown)="popoverEdu(item.id)" >
+          <img src="images/isInEducationalPlan.png"  />
+        </button>
+        </div>
+        <div *ngIf="isNOK(isEducation(item.id),item.checked)">
+          <img src="images/chapter{{getColor._id}}/competenceUndone.png" style="float:right;padding-right:35px;"/>
+        </div>
+        <div class="text">
+        <span id="text" > {{item.teacherText}}</span>
+      </div>
+        <span id="number">{{getColor._id}}.{{item.id}}</span>
+
+
+      </div >
+
+    </div>
     <div class="col-sm-4" id="illuRight">
-      <img src="img/illustrations/illustrationRight.png" position="fixed" style="margin-top: 45px">
 
-
-      <button class="buttons" id="buttonUp" type="button" (click)="scrollWin(0,-80)"> <img src="img/chapter10/scrollUp.png"> </button>
-        <button class="buttons" id="buttonDown" type="button" (click)="scrollWin(0,80)">  <img src="img/chapter10/scrollDown.png"> </button>
+      <div  *ngFor="let item of getIllustrations"  >
+        <div *ngIf="illuPicture()" >
+             <img src="{{item.illustrationRight}}" position="fixed" style="margin-top: 45px;padding-bottom: 105px">
+             </div>
+            </div>
+      <button class="buttons" id="buttonUp" type="button"  (mousedown)="scrollWin(0,-80)"> <img src="images/chapter{{getColor._id}}/scrollUp.png" > </button>
+        <button class="buttons" id="buttonDown" type="button" (mousedown)="scrollWin(0,80)">  <img src="images/chapter{{getColor._id}}/scrollDown.png"> </button>
     </div>
  </div>
  </div>
+
+ <app-footer></app-footer>

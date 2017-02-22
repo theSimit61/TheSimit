@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<div class="content" [ngStyle]="{'background-color': getColor}">
+
+ <div class="row">
+   <div class="col-sm-4">
+       <div *ngIf="isAll(getColor)">
+      <img src="images/chapter{{getId}}/littleChapterFlag.png" align="left" position="fixed">
+  </div>
+
+
+ </div>
+    <div class="col-sm-4">
+      <div  *ngFor="let item of getDaten"  id="bubble">
+
+          <button id="pop{{item.id}}" class="buttonKom" type="button" data-toggle="popover" data-trigger="focus" (mousedown)="popoverDate(item.id, item.fromDate)" >
+        <img src="images/chapter{{item.chapterId}}/competenceDone.png" />
+      </button>
+        <div class="text">
+        <span id="text" > {{item.teacherText}}</span>
+      </div>
+        <span id="number">{{item.chapterId}}.{{item.id}}</span>
+
+
+      </div >
+
+    </div>
+    <div class="col-sm-4" id="illuRight">
+
+      <button class="buttons" id="buttonUp" type="button"  (click)="scrollWin(0,-80)"> <img src="images/chapter{{getId}}/scrollUp.png" > </button>
+        <button class="buttons" id="buttonDown" type="button" (click)="scrollWin(0,80)">  <img src="images/chapter{{getId}}/scrollDown.png"> </button>
+    </div>
+ </div>
+ </div>
+
+ <app-footer></app-footer>

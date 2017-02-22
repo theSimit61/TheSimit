@@ -1,5 +1,6 @@
+<app-header></app-header>
 <div class="contentAll">
-    <div class="Headline"> <img src="img/change-password.png">
+    <div class="Headline"> <img src="images/change-password.png">
       <p id="textHeadline"> PASSWORT ÄNDERN </p>
     </div>
 
@@ -9,15 +10,35 @@
         <label class="inputPW"> AKTUELLES PASSWORT*  </label> <input type="password" id="inputPassword" class="form-control">
         </div>
         <div>
-        <label class="inputPW"> NEUES PASSWORT*   </label><input type="password" id="popPw" class="form-control" data-toggle="popover"
-        data-placement="auto right" data-trigger="focus" animation="true"data-content="Aus Sicherheitsgründen muss das
+        <label class="inputPW"> NEUES PASSWORT*   </label>
+        <input type="password" id="popPw" class="form-control" data-toggle="popover"
+        data-placement="auto right" data-trigger="focus" animation="true" data-content="Aus Sicherheitsgründen muss das
         Passwort mindestens 7-stellig sein sowie einen Großbuchstaben, eine Ziffer und ein Sonderzeichen enthalten.">
       </div>
         <div>
-        <label class="inputPW"> PASSWORT BESTÄTIGUNG*  </label> <input type="password" id="inputPassword" class="form-control">
+        <label class="inputPW"> PASSWORT BESTÄTIGUNG*  </label> <input type="password" id="inputPasswordnew" class="form-control">
       </div>
       </div>
     </form>
 
-    <button type="submit" id="aendern" class="defaultbutton">ÄNDERN</button>
+    <button type="submit" id="aendern" class="defaultbutton" (mousedown)="aendern()">ÄNDERN</button>
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content" [ngStyle]="{'background-color': background}">
+
+          <button type="button" class="close" data-dismiss="modal"><img src="images/delete.png"></button>
+          <br><br><br>
+          <h4 class="modal-title"><div *ngIf="check"><img src="images/confirmation.png"></div>
+          <div *ngIf="!check"><img src="images/warning.png"></div></h4>
+          <br>
+          <div *ngIf="check"><p>{{message.message}}</p></div>
+          <div *ngIf="!check"><p>{{message}}</p></div>
+          <br><br><br>
 </div>
+
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

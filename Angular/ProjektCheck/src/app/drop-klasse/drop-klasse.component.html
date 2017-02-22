@@ -1,3 +1,11 @@
-<p>
-  drop-klasse works!
-</p>
+<li class="dropdownrechts"><a class="dropdown-toggle" id="dropdown" data-toggle="dropdown"  href="#">
+  <img src="..{{study.imageUrlInactive}}"  alt="eine grafik" name="dropklasse"
+   (mousedown)="activeClass(study.imageUrl, study.imageUrlInactive)" ></a>
+    <ul class="dropdown-menu">
+        <label id="imgConfi"><img src="..{{study.imageUrlInactive}}"  alt="eine grafik" >
+        <label>Klasse: {{study.class}}</label></label><br><br><br><br>
+
+        <label style="float:right;">Klassenlehrer/in<br> {{teacher}} </label>
+
+    </ul>
+</li>

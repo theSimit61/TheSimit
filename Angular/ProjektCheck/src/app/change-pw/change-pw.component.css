@@ -1,5 +1,16 @@
+#myModal{
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 13pt;
+  color: white;
+}
 label{
   margin-bottom: 0;
+}
+
+.avatare{
+  width: 800px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 .inputPW{
   width:210px;
@@ -19,6 +30,7 @@ label{
 }
 
 .defaultbutton{
+  margin-top: 50px;
       font-family: 'Comic Sans MS', sans-serif;
       font-size: 13pt;
       font-weight: 800;
@@ -54,6 +66,16 @@ top: 20px !important;
 #inputPassword:focus{
   border: 2px solid #727AB2;
 }
+#inputPassword{
+  color: #001a28;
+}
+
+#inputPasswordnew:focus{
+  border: 2px solid #727AB2;
+}
+#inputPasswordnew{
+  color: #001a28;
+}
 
 input {
   width: auto;
@@ -71,8 +93,4 @@ input.form-control{
     letter-spacing: 1px;
     font-size: 13pt;
 
-}
-
-#inputPassword{
-  color: #001a28;
 }

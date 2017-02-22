@@ -1,3 +1,16 @@
-<p>
-  drop-erreicht works!
-</p>
+<li class="dropdownleft"><a class="dropdown-toggle" data-toggle="dropdown"  href="#"><img src="images/achievedCompetences-inactive.png"  alt="eine grafik"
+  name="droperreicht"   (click)="activeErreicht()" aria-pressed="true" ></a>
+    <ul class="dropdown-menu">
+        <label id="imgConfi" ><img src="images/achievedCompetences-big.png"  alt="eine grafik">
+        <label>DAS<br>KANN<br>ICH!</label></label>
+
+      <br><br><br><br><br>  <li id="firstKom"
+      (mouseenter)="onHover($event,'#5C79BB')"
+      (mouseleave)="unHover($event,'#011C38')" (mousedown)="allCompetences()"><a  [routerLink]="['/reachedCompetence', '0']" [routerLinkActive]="['active']" >ALLE KOMPETENZEN!</a></li>
+
+        <li *ngFor="let item of getChapterTrue" id =KOM{{item._id}}   [ngStyle]="{'background-color':item.strongcolor}"
+        (mouseenter)="onHover($event,item.weakcolor)"
+        (mouseleave)="unHover($event,item.strongcolor)" (mousedown)="loadReached(item._id)"> <a [routerLink]="['/reachedCompetence', item._id]" [routerLinkActive]="['active']">{{item.name}}</a></li>
+
+    </ul>
+</li>

@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+<div class="content" style="background-color: #8da6d6; text-align: center;">
+
+   <div class="row">
+     <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+
+        <div  *ngFor="let item of getDaten" >
+          <div *ngIf="isEducation(item.id)"  id="bubble" >
+          <div *ngIf="isOK(item.checked)" >
+            <button id="pop{{item.id}}" class="buttonKom" type="button" data-toggle="popover" data-trigger="focus" (mousedown)="popoverDate(item.id, item.fromDate)" >
+          <img src="images/chapter{{item.chapterId}}/competenceDone.png" />
+        </button>
+            </div>
+          <div *ngIf="isNOK(item.checked)">
+            <button id="popEdu{{item.id}}"  class="buttonKom" type="button" data-toggle="popover" data-trigger="focus" (mousedown)="popoverEdu(item.id)" >
+            <img src="images/isInEducationalPlan.png"  />
+          </button>
+          </div>
+
+          <div class="text">
+          <span id="text" > {{item.teacherText}}</span>
+        </div>
+          <span id="number">{{item.chapterId}}.{{item.number}}</span>
+
+
+        </div >
+      </div >
+      </div>
+      <div class="col-sm-4" id="illuRight">
+
+        <button class="buttons" id="buttonUp" type="button"  (click)="scrollWin(0,-80)"> <img src="images/chapter15/scrollUp.png" > </button>
+          <button class="buttons" id="buttonDown" type="button" (click)="scrollWin(0,80)">  <img src="images/chapter15/scrollDown.png"> </button>
+      </div>
+   </div>
+   </div>
+   <app-footer></app-footer>

@@ -1,4 +1,21 @@
-
+#myModalAva1{
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 13pt;
+  color: white;
+}
+#myModalAva2{
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 13pt;
+  color: white;
+}
+.modal-content {
+  background-color: #76b82d;
+}
+.avatare {
+width: 800px;
+height: 180px;
+margin-left: 145px;
+}
 .avatarButton{
 background: transparent;
 border: none;
@@ -11,8 +28,17 @@ outline: none;
   font-size: 13px;
 }
 
-#speichern{
+#speichern1{
   font-size: 13px;
+}
+#speichern1:disabled{
+background-color: #4565ad;
+}
+#speichern2{
+  font-size: 13px;
+}
+#speichern2:disabled{
+background-color: #4565ad;
 }
 
 .aButton{
